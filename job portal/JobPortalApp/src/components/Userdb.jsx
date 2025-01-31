@@ -1,6 +1,9 @@
 import { AppBar, Avatar, Box, Button, IconButton, Toolbar, Typography, useMediaQuery, useTheme, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu"; // Import Menu Icon
 import React, { useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import './Userdbs.css'
+import Userprofile from "./Userprofile";
 
 const Userdb = () => {
   const [anchorEl, setAnchorEl] = useState(null); // State for dropdown menu
@@ -21,7 +24,7 @@ const Userdb = () => {
   };
 
   return (
-    <div>
+    <div >
       <AppBar component="nav">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <div>
@@ -70,9 +73,15 @@ const Userdb = () => {
           )}
 
           <Button sx={{ color: "#fff",marginLeft:5 }}>Logout</Button>
-          <Avatar className="profile-pic" src="/profile-user.png" sx={{ ml: 2 }} />
+          
+          <Link to="/userprofile" >
+            <Avatar className="profile-pic" src="/profile-user.png" sx={{ ml: 2 }} />
+          </Link>
         </Toolbar>
       </AppBar>
+      <Routes>
+        <Route path='/userprofile' element={<Userprofile/>} />
+      </Routes>
     </div>
   );
 };

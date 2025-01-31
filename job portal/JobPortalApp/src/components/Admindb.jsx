@@ -56,7 +56,7 @@ const Admindb = () => {
 
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            User Dashboard
+            Admin Dashboard
           </Typography>
 
           {/* Navigation Buttons (Hidden on Small Screens) */}
@@ -69,7 +69,7 @@ const Admindb = () => {
           )}
 
           <Button sx={{ color: "#fff",marginLeft:5 }}>Logout</Button>
-          <Avatar className="profile-pic" src="/profile-user.png" sx={{ ml: 2 }} />
+          
         </Toolbar>
       </AppBar>
     </div>

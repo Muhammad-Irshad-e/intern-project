@@ -15,13 +15,17 @@ function Login() {
     'hsla(220, 30%, 5%, 0.05) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.5) 0px 15px 35px -5px',
 
     }}>
-        <h1 style={{textDecoration:'underline'}}>Login</h1>
+         <br /><br />
+              <Typography variant="h4">Login</Typography>
         <br />
-        <TextField id="outlined-basic" label="Username" variant="outlined" />
+        <TextField id="outlined-basic" label="Username" variant="outlined" required/>
         <br /> <br />
-        <TextField id="outlined-basic" label="Password" variant="outlined" />
+        <TextField id="outlined-basic" label="Password" variant="outlined" required/>
         <br /> <br />
-        <Button variant="contained" >Login</Button>
+        <Link to='/admindb'>
+        
+        <Button variant="contained" type='submit' >Login</Button>
+        </Link>
         <br /> <br />
         <Typography variant="subtitle2" sx={{display:'inline-block'}}>
             Don't have an Account?&nbsp;&nbsp;&nbsp;
